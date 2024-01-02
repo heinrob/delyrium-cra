@@ -3,9 +3,11 @@
 {artist: Pink Floyd}
 {key: D}
 {album: dark side of the moon}
-{columns: 2}
+{columns: 3}
 
+{start_of_grid}
 | [D] |
+{end_of_grid}
 
 [D]The lunatic is on the [G7]grass
 [D]The lunatic is on the [G7]grass
@@ -38,7 +40,9 @@ There's someone in my head but it's not me.
 (I can't think of anything to say except...
 I think it's marvelous! Ha, ha, ha! )
 
+{sog}
 | [D] [C] [Bb] [A] |
+{eog}
 
 [D]All that you touch
 And [C]all that you see

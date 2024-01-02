@@ -6,7 +6,7 @@
 {tags: wohldenberg}
 {columns: 2}
 
-Daug:  x-x-0-3-3-2
+{define: Daug frets x x 0 3 3 2}
 
 Close your [e]eyes and I'll [A7]kiss you
 To[D]morrow I'll [b]miss you
