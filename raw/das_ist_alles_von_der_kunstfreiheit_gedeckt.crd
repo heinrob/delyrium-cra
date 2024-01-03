@@ -5,9 +5,9 @@
 {capo: 4}
 {columns: 2}
 
-{start_of_grid: Intro}
-| B7 . . . | e . D . | G . . . | G . A . | e . . . |
-| e . D . | G . . . | G . D . | e . A . |
+{start_of_grid}
+| [B7] . . . | [e] . [D] . | [G] . . . | [G] . [A] . | [e] . . . |
+| [e] . [D] . | [G] . . . | [G] . [D] . | [e] . [A] . |
 {end_of_grid}
 
 [e]Also jetzt mal [D]ganz spekula[G]tiv

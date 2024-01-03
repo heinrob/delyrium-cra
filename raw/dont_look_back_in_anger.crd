@@ -4,7 +4,9 @@
 {key: C}
 {columns: 2}
 
+{sog}
 |[C]|[F]|[C]|[F]|
+{eog}
 
 [C]Slip inside the [G]eye of your [a]mind
 Don't you [E]know you might [F]find
@@ -25,7 +27,9 @@ But all the [E]things that you've [F]seen
     Her [C]soul [G]slides a[a]way [E]
     But don't look [F]back in anger, [G]I heard you [C]say
 
-[G] [a] [E] [F] [G] [C] [a] [G]
+{sog}
+| [G] [a] [E] [F] [G] [C] [a] [G] |
+{eog}
 
 Take me to the place where you go
 Where _no_body _knows_ if it's night or day

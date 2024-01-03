@@ -4,10 +4,12 @@
 {key: a}
 {columns: 2}
 
-[C] [Cmaj7] [Cadd9] [C]
-[asus2] [asus4] [a] [asus2]
-[Cadd9] [C] [Cmaj7] [Cadd9]
-[a] [asus2] [asus4] [a]
+{sog}
+| [C] | [Cmaj7] | [Cadd9] | [C] |
+| [asus2] | [asus4] | [a] | [asus2] |
+| [Cadd9] | [C] | [Cmaj7] | [Cadd9] |
+| [a] | [asus2] | [asus4] | [a] |
+{eog}
 
 [G]I [C]close [G]my [a]eyes
 [G]Only for a [d7]moment and the [a]moment's gone [G]

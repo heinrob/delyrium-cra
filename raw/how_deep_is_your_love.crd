@@ -5,8 +5,9 @@
 {tags: ukulele}
 {columns: 2}
 
-[G] [Gmaj7] [Cmaj7] [D7]
-[G] [Gmaj7] [Cmaj7] [D7]
+{sog}
+|: [G] | [Gmaj7] | [Cmaj7] | [D7] :|
+{eog}
 
 I know your [G]eyes in the [b7]morning [C6]sun
 [E7]I feel you [a7]touch me in the [B7]pouring [D7]rain
@@ -44,9 +45,12 @@ And it's [b7]me you need to [D7]show
 
     How deep is your love
 
-
-A|-[C6]0-|-[e7]2-|-[c6]3-|-[d6]0-|
-E|-0-|-0-|-3-|-1-|
-C|-0-|-2-|-3-|-2-|
-G|-0-|-0-|-2-|-4-|
+{chord: C6 frets 0 0 0 0}
+{chord: e7 frets 0 2 0 2}
+{chord: c6 frets 2 3 3 3}
+{chord: d6 frets 4 2 1 0}
+#A|-[C6]0-|-[e7]2-|-[c6]3-|-[d6]0-|
+#E|-0-|-0-|-3-|-1-|
+#C|-0-|-2-|-3-|-2-|
+#G|-0-|-0-|-2-|-4-|
 
