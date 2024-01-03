@@ -6,8 +6,9 @@
 {columns: 2}
 
 {start_of_grid}
-| [B7] . . . | [e] . [D] . | [G] . . . | [G] . [A] . | [e] . . . |
-| [e] . [D] . | [G] . . . | [G] . [D] . | [e] . [A] . |
+| [B7] |
+| [e] [D] | [G] | [G] [A] | [e] |
+| [e] [D] | [G] | [G] [D] | [e] [A] |
 {end_of_grid}
 
 [e]Also jetzt mal [D]ganz spekula[G]tiv
@@ -24,9 +25,8 @@ Ju[C]ristisch wär die [B7]Grauzone er[e]reicht
 Doch vor Gericht machte ich [D]es mir wieder [G]leicht
 Zeig mich [C]an und ich [B7]öffne einen [a]Sekt
 Das ist [B7]alles [B7/A]von der [B7/G]Kunstfrei[B7/F#]heit ge[e]deckt
+[*Intro]
 {eoc}
-
-[Intro]
 
 _Also_ jetzt mal _ganz_ spekula_tiv_
 Ich nutze _ganz_ bewusst lie_ber_ den Konjunk_tiv_
