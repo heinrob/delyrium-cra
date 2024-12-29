@@ -1,21 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.21c937bc.css",
-    "main.js": "/static/js/main.87951af7.js",
+    "main.css": "/static/css/main.8303a4f5.css",
+    "main.js": "/static/js/main.85110dd3.js",
     "static/js/787.e3cf9204.chunk.js": "/static/js/787.e3cf9204.chunk.js",
     "static/media/Literata.ttf": "/static/media/Literata.e65e75df04f03038b940.ttf",
     "static/media/Milonga-Regular.ttf": "/static/media/Milonga-Regular.560281c48d54a2252656.ttf",
+    "static/media/ukulele.svg": "/static/media/ukulele.bfc2c3320b9746a1eec767db5a2275b1.svg",
     "index.html": "/index.html",
+    "static/media/album.svg": "/static/media/album.d99a38de79e7683a5898ede74465689e.svg",
     "static/media/house.svg": "/static/media/house.040398f074787305255e0c2b1c8a6d4e.svg",
-    "static/media/magnifying-glass.svg": "/static/media/magnifying-glass.b784ffe762c942379354bfea8f22a7f7.svg",
+    "static/media/wohldenberg.svg": "/static/media/wohldenberg.72ca286b9b628b4979d890941a445ea6.svg",
     "static/media/plus.svg": "/static/media/plus.d43d9b1527bce32f53013b3db762396f.svg",
     "static/media/minus.svg": "/static/media/minus.0ede0616592f2b664a1b25ecd1aa49f7.svg",
-    "main.21c937bc.css.map": "/static/css/main.21c937bc.css.map",
-    "main.87951af7.js.map": "/static/js/main.87951af7.js.map",
+    "main.8303a4f5.css.map": "/static/css/main.8303a4f5.css.map",
+    "main.85110dd3.js.map": "/static/js/main.85110dd3.js.map",
     "787.e3cf9204.chunk.js.map": "/static/js/787.e3cf9204.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.21c937bc.css",
-    "static/js/main.87951af7.js"
+    "static/css/main.8303a4f5.css",
+    "static/js/main.85110dd3.js"
   ]
 }
