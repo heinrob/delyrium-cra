@@ -8,7 +8,9 @@ import useLocalstorage from './util/useLocalstorage';
 import {Parser} from './util/Parser';
 import { Icon } from './Icon';
 
-type DirectiveModes = "normal" | "grid";
+type DirectiveModes = "normal" | "grid" | "chorus" | "verse" | "bridge" | "tab";
+const directiveShorts: Record<string, DirectiveModes> = {n: "normal", g: "grid", c: "chorus", v: "verse", b: "bridge", t: "tab"};
+
 type Props = {
   data: SheetType;
   callbacks: {
@@ -41,6 +43,7 @@ function Sheet({data, callbacks}: Props) {
   const parser = new Parser(transposeChord);
 
   let directiveMode: DirectiveModes = "normal";
+  let chorusLine: string | React.ReactNode[] = "";
 
   return (
       <div className={styles.layout}>
@@ -60,7 +63,7 @@ function Sheet({data, callbacks}: Props) {
           {sheet.lyrics.split("\n\n").map((block, blockId) => {
             let blockClasses = styles.block;
             // peek what comes next
-            if(block.match(/^[ \t]{1,4}|{soc}|{start_of_chorus}/g)) {
+            if(block.match(/^[ \t]{1,4}|^{soc|^{start_of_chorus|^{chorus/g)) {
               blockClasses = classNames(blockClasses, styles.chorus);
             }
             return (<div className={blockClasses} key={blockId}>
@@ -72,18 +75,28 @@ function Sheet({data, callbacks}: Props) {
               if(line[0] === "{") {
                 // TODO: directives
                 switch (line) {
-                  case "{start_of_grid}":
-                  case "{sog}":
-                    directiveMode = "grid";
-                    break;
-                  case "{end_of_grid}":
-                  case "{eog}":
+                  case line.match(/^{end_of_|^{eo[bcgntv]}/)?.input:
                     directiveMode = "normal";
                     break;
-                  case line.match(/^{start_of_chorus|^{end_of_chorus|^{soc|^{eoc/)?.input:
+                  case line.match(/^{start_of_[a-z]+|^{so[bcgntv]}/)?.input:
+                    const directiveStart = /^{start_of_([a-z]+)|^{so([bcgntv])}/.exec(line);
+                    if(directiveStart && directiveStart[1]) {
+                      directiveMode = directiveStart[1] as DirectiveModes;
+                    } else if(directiveStart && directiveStart[2]) {
+                      directiveMode = directiveShorts[directiveStart[2]];
+                    } else {
+                      console.log("Directive not found, fallback to normal:", directiveStart);
+                      directiveMode = "normal";
+                    }
                     break;
                   case line.match(/^{define:|^{chord:/)?.input:
                     return (<div className={styles['chord-definition']} key={idx}>{parser.directiveDefine(line)}</div>);
+                  case line.match(/^{chorus/)?.input:
+                    return (
+                      <div key={idx} className={classNames(styles.line)}>
+                        {chorusLine}...
+                      </div>
+                    );
                   default:
                     console.log('found directive', line);
                     break;
@@ -99,7 +112,11 @@ function Sheet({data, callbacks}: Props) {
                 // parse chords
                 modifications.unshift(parser.parseBlock(modifications[0]));
                 // underline
-                modifications.unshift(reactStringReplace(modifications[0], /_(.*?)_/g, (value, matchId) => (<span className={styles.highlight} key={`match-${matchId}`}>{value}</span>)))
+                modifications.unshift(reactStringReplace(modifications[0], /_(.*?)_/g, (value, matchId) => (<span className={styles.highlight} key={`match-${matchId}`}>{value}</span>)));
+
+                if(directiveMode === 'chorus' && chorusLine === "" && !empty) {
+                  chorusLine = modifications[0];
+                }
               }
               return (
                 <div key={idx} className={classNames(styles.line, empty && styles.empty)}>
